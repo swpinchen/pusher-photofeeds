@@ -1,7 +1,10 @@
+# app/controllers/photo_controller.rb
 class PhotoController < ApplicationController
-  def index
+  def store
+    render plain: params[:caption].inspect
   end
 
-  def store
+  def index
+    @posts = Post.all
   end
 end
